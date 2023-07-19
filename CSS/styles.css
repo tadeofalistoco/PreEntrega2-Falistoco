@@ -4,6 +4,13 @@
     background-color: rgb(15, 15, 15);
 }
 
+/* ESTILOS DEL NAV */ 
+.mis-encabezados{
+    margin: 0;
+    padding: 20px;
+}
+
+/* Barra de navegacion*/
 .navegador{
     background-color: black;
     display: flex;
@@ -52,5 +59,36 @@ a{
 .dropdown-hijas:hover{
     background-color: #ebf066;
     color: black;
-    
+}
+
+/* ESTILOS DEL MAIN */
+
+/* Estilos del carrusel de index*/
+.imagen-del-carrusel{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.mi-carrusel{
+    border-top: 20px solid rgb(15, 15, 15);
+}
+
+.texto-carrusel{
+    margin: 25px 0px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos de las cards de maquinas*/
+.tarjetas{
+    width: 18rem;
+    display: inline-block;
+}
+
+.mi-catalogo{
+    display: grid;
+    padding: 30px;
+    gap: 30px;
 }
