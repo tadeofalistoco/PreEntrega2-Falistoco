@@ -15,27 +15,56 @@
     <header>
         <nav class="navegador">
             <!-- Logo -->
-            <div>
-                <img src="../img/Logo-proyecto.png"  alt="Logo">
-            </div>
+            <a href="../index.html">
+                <div>
+                    <img src="../img/Logo-proyecto.png"  alt="Logo">
+                </div>
+            </a>
             <!-- Barra de navegacion -->
             <ul class="lista-navegador">
-                <li>
+                <li class="nav-de-desktop">
                     <a href="../index.html">Home</a>
                 </li>
 
                 <!-- Dropdown -->
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown nav-de-desktop">
                     <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Maquinas</a>
                     <ul class="dropdown-menu dropdown-padre">
-                        <li><a class="dropdown-hijas" href="tren_superior.html">Tren superior</a></li>
-                        <li><a class="dropdown-hijas" href="tren_inferior.html">Tren inferior</a></li>
+                        <li><a class="dropdown-hijas" href="tren_superior.html">Tren Superior</a></li>
+                        <li><a class="dropdown-hijas" href="tren_inferior.html">Tren Inferior</a></li>
                         <li><a class="dropdown-hijas" href="peso_libre.html">Peso Libre</a></li>
                     </ul>
                 </li>
 
-                <li>
+                <li class="nav-de-desktop">
                     <a href="contacto_sucursales.html">Contacto y Sucursales</a>
+                </li>
+
+                <!-- Menu hamburguesa -->
+                <li class="menu-hamburguesa">
+                  <div class="nav-item dropdown">
+                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img width="40px" src="../img/Icono-hamburguesa.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu dropdown-padre lista-navegador-hamburguesa">
+                      <li class="item-hamburguesa">
+                          <a href="../index.html">Home</a>
+                      </li>
+      
+                      <li class="item-hamburguesa">
+                        <a href="">Maquinas:</a> 
+                        <ul class="maquinas-mq">
+                            <li><a href="tren_superior.html">Tren Superior</a></li>
+                            <li><a href="tren_inferior.html">Tren Inferior</a></li>
+                            <li><a href="peso_libre.html">Peso Libre</a></li>
+                        </ul>
+                      </li>
+      
+                      <li class="item-hamburguesa">
+                          <a href="contacto_sucursales.html">Contacto y Sucursales</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
             </ul>
         </nav>
@@ -79,7 +108,8 @@
     </main>
 
     <footer>
-        
+        <p class="mi-footer">Todos los derechos reservados.</p>
+        <p class="mi-footer">El formato de esta página es de catálogo. Para efectuar una compra acérquese a cualquiera de nuestras sucursales de Lunes a Sábados entre las 10 y las 20 hs.</p>            
     </footer>
     
     <!-- Script de Bootstrap -->

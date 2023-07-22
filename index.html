@@ -15,27 +15,56 @@
     <header>
         <nav class="navegador">
             <!-- Logo -->
-            <div>
-                <img src="img/Logo-proyecto.png"  alt="Logo">
-            </div>
+            <a href="index.html">
+              <div>
+                  <img src="img/Logo-proyecto.png"  alt="Logo">
+              </div>
+            </a>
             <!-- Barra de navegacion -->
             <ul class="lista-navegador">
-                <li>
+                <li class="nav-de-desktop">
                     <a href="index.html">Home</a>
                 </li>
 
                 <!-- Dropdown -->
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown nav-de-desktop">
                     <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Maquinas</a>
                     <ul class="dropdown-menu dropdown-padre">
-                        <li><a class="dropdown-hijas" href="pages/tren_superior.html">Tren superior</a></li>
-                        <li><a class="dropdown-hijas" href="pages/tren_inferior.html">Tren inferior</a></li>
+                        <li><a class="dropdown-hijas" href="pages/tren_superior.html">Tren Superior</a></li>
+                        <li><a class="dropdown-hijas" href="pages/tren_inferior.html">Tren Inferior</a></li>
                         <li><a class="dropdown-hijas" href="pages/peso_libre.html">Peso Libre</a></li>
                     </ul>
                 </li>
 
-                <li>
+                <li class="nav-de-desktop">
                     <a href="pages/contacto_sucursales.html">Contacto y Sucursales</a>
+                </li>
+
+                <!-- Menu hamburguesa -->
+                <li class="menu-hamburguesa">
+                  <div class="nav-item dropdown">
+                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img width="40px" src="img/Icono-hamburguesa.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu dropdown-padre lista-navegador-hamburguesa">
+                      <li class="item-hamburguesa">
+                          <a class="hamburguesa-active" href="index.html">Home</a>
+                      </li>
+      
+                      <li class="item-hamburguesa">
+                        <a href="">Maquinas:</a> 
+                        <ul class="maquinas-mq">
+                            <li><a class="hamburguesa-active" href="pages/tren_superior.html">Tren Superior</a></li>
+                            <li><a class="hamburguesa-active" href="pages/tren_inferior.html">Tren Inferior</a></li>
+                            <li><a class="hamburguesa-active" href="pages/peso_libre.html">Peso Libre</a></li>
+                        </ul>
+                      </li>
+      
+                      <li class="item-hamburguesa">
+                          <a class="hamburguesa-active" href="pages/contacto_sucursales.html">Contacto y Sucursales</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
             </ul>
         </nav>
@@ -47,24 +76,30 @@
         <div id="carouselExampleCaptions" class="carousel slide mi-carrusel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/Poleas-Cerradas.png" class="d-block imagen-del-carrusel" alt="Poleas Poleas Cerradas">
+                <a href="pages/tren_superior.html">
+                  <img src="img/Poleas-Cerradas.png" class="d-block imagen-del-carrusel" alt="Poleas Poleas Cerradas">
+                </a>
                 <div class="texto-carrusel">
-                  <h5>Poleas Cerradas</h5>
-                  <p>Algun mensaje sobre las poleas cerradas</p>
+                  <p class="h-carrusel">Poleas Cerradas</p>
+                  <p>Incluye barra de dominadas y accesorios</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/Camilla-Femoral.png" class="d-block imagen-del-carrusel" alt="Camilla Femoral">
+                <a href="pages/tren_inferior.html">
+                  <img src="img/Camilla-Femoral.png" class="d-block imagen-del-carrusel" alt="Camilla Femoral">
+                </a>
                 <div class="texto-carrusel">
-                  <h5>Camilla de Femoral</h5>
-                  <p>Algun mensaje sobre la camilla de femoral</p>
+                  <p class="h-carrusel">Camilla de Femoral</p>
+                  <p>Asiento y rango de movimiento regulables</p>
                 </div>                
               </div>
               <div class="carousel-item">
-                <img src="img/Press-Hombro.png" class="d-block imagen-del-carrusel" alt="Press Hombro">
+                <a href="pages/tren_superior.html">
+                  <img src="img/Press-Hombro.png" class="d-block imagen-del-carrusel" alt="Press Hombro">
+                </a>
                 <div class="texto-carrusel">
-                  <h5>Press de hombros</h5>
-                  <p>Algun mensaje sobre el press de hombros</p>
+                  <p class="h-carrusel">Press de hombros</p>
+                  <p>Mejores angulos para una mayor contracción</p>
                 </div>                
               </div>
 
@@ -87,11 +122,11 @@
     </main>
 
     <footer>
-        
+      <p class="mi-footer">Todos los derechos reservados.</p>
+      <p class="mi-footer">El formato de esta página es de catálogo. Para efectuar una compra acérquese a cualquiera de nuestras sucursales de Lunes a Sábados entre las 10 y las 20 hs.</p>          
     </footer>
     
     <!-- Script de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
-

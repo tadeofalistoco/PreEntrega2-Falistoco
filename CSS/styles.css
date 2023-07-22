@@ -6,6 +6,8 @@
 
 /* ESTILOS DEL NAV */ 
 .mis-encabezados{
+    color: #d5da1b;
+    font-weight: 700;
     margin: 0;
     padding: 20px;
 }
@@ -16,19 +18,39 @@
     display: flex;
     justify-content: space-between;
     height: 72.5px;
-
 }
 
 header nav .lista-navegador{
     background-color: black;
     margin: 0px 150px;
     list-style: none;
-    display: flex;
-    column-gap: 8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     height: 72.5px;
     font-size: 20px;
     font-weight: 500;
+}
+
+.menu-hamburguesa{
+    display: none;
+}
+
+.item-hamburguesa{
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+.hamburguesa-active:active{
+    background-color: #ebf066;
+    color: black;
+    display: block;
+
+}
+
+.maquinas-mq{
+    list-style: none;
+    background-color: black;
 }
 
 .lista-navegador li{
@@ -62,10 +84,13 @@ a{
 }
 
 /* ESTILOS DEL MAIN */
+main{
+    padding-bottom: 30px
+}
 
-/* Estilos del carrusel de index*/
+/* Estilos del carrusel de index */
 .imagen-del-carrusel{
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
 }
 
@@ -81,14 +106,106 @@ a{
     text-align: center;
 }
 
-/* Estilos de las cards de maquinas*/
+.h-carrusel{
+    margin-bottom: 5px;
+    font-size: 19px;
+    font-weight: 650;
+}
+
+/* Estilos de las cards de maquinas */
 .tarjetas{
     width: 18rem;
-    display: inline-block;
+    border: solid 5px rgb(61, 61, 61);
 }
 
 .mi-catalogo{
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding: 30px;
     gap: 30px;
+}
+
+/* Estilos de contacto y sucursales */
+.redes-sociales{
+    padding: 10px 30px 30px;
+}
+
+.lista-contacto{
+    list-style: none;
+}
+
+.lista-contacto li{
+    margin: 10px 0px;
+}
+
+.mis-sucursales{
+    padding: 10px 30px 30px;
+    display: grid;
+    gap: 20px;
+}
+
+.mapa{
+    border: solid 5px rgb(61, 61, 61);
+    width: 800px;
+    height: 300px;
+}
+
+/* ESTILOS DEL FOOTER */
+footer{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    background-color: black;
+    height: 130px;
+}
+
+.mi-footer{
+    background-color: black;
+    font-size: small;
+}
+
+
+/* MQ tablet */
+@media screen and (max-width:1024px) {
+    /* Estilos del header*/
+    header nav ul .nav-de-desktop{
+        display: none;
+    }
+
+    header nav .menu-hamburguesa{
+        display: inline;
+    }
+
+    .dropdown-padre{
+        height: 190px;
+    }
+
+    header nav .lista-navegador{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 0px 30px;
+    }
+
+    /* Estilos del main */
+    .tarjetas{
+        width: 20rem;
+    }
+    .mi-catalogo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* MQ mobile */
+@media screen and (max-width:500px) {
+    .mi-catalogo{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .mapa{
+        width: 400px;
+        height: 300px;
+    }    
 }
